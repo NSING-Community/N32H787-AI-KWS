@@ -1,3 +1,5 @@
+**简体中文** | [English](README.en.md)
+
 # N32H787 离线语音关键词识别 DEMO
 
 基于 N32H787 MCU 与板载 WM8978 音频编解码器，在端侧运行 TensorFlow Lite Micro 的 DS-CNN_S 语音关键词模型（KWS, Keyword Spotting），**完全离线**识别 10 个英文命令词并通过串口与指示灯实时输出结果的模板工程。
@@ -75,7 +77,8 @@ n32h787_kws_demo/
 │   └── KWS_DEPLOYMENT.md        # 详细设计与部署说明（内存布局/数据路径/调参）
 ├── LICENSE                      # Apache License 2.0
 ├── NOTICE                       # 第三方组件归属与许可
-└── README.md
+├── README.md                    # 说明文档（简体中文）
+└── README.en.md                 # 说明文档（English）
 ```
 
 ## AI 模型说明
