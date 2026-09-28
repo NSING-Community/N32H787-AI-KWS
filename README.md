@@ -10,7 +10,19 @@
 
 ### [打开在线烧录页面](https://update.nationstech.com/ns-flash/?target=n32h787&firmware=https%3A%2F%2Fraw.githubusercontent.com%2FNsing-Community%2FN32H787-AI-KWS%2Fmain%2Fbin%2Fn32h787_kws_demo.bin)
 
-> 烧录前请通过 **DEBUG USB（J9）** 连接 NSLink。
+> 烧录前请通过 **DEBUG USB（J9）** 连接 NSLink。本工程只用板载 WM8978 与驻极体麦克风，无需外接摄像头等其它模块。
+
+**烧录步骤**
+
+1. 点击**接入 ns-link**，在左上角的弹框中点击设备，再点击**连接**——连接成功后会自动识别**芯片型号**（N32H787）与 **Flash 容量**（2 MB）。
+2. 选择**固件来源**（二选一）：**固件 URL** 为已编好的固件，链接已随页面填好，直接使用即可；**本地文件**则用于烧录自己编译的固件，点击**选择文件**载入 `.bin`。
+3. 选择**校验方式**，默认即可。
+4. 点击**开始烧录**，等待进度条走完，下方日志出现"成功"即烧录完成。
+5. 烧录完成后按复位键（或重新上电）即运行新固件，点击左侧**串口助手**并连接 NSLink 虚拟串口（波特率 **921600**），然后对着板载 **MIC** 说出关键词，串口即实时打印识别到的**关键词与置信度**。
+
+![ns-flash 串口助手：烧录后对着板载 MIC 说关键词，串口实时打印关键词与置信度](docs/images/ns_flash_serial_monitor.png)
+
+串口输出形如 `left 96%`、`up 98%`、`right 98%`；也可以关闭页面，改用本机 [tools/kws_monitor.py](tools/kws_monitor.py) 查看（见下文"串口使用"）。
 
 ## 简介
 

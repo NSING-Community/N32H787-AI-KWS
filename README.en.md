@@ -8,9 +8,21 @@ A template project that runs the TensorFlow Lite Micro DS-CNN_S keyword spotting
 
 No toolchain installation required. Open the link below in Chrome/Edge and flash the firmware straight to the N32H787 through an NSLink debugger:
 
-### [Open the online flashing page](https://update.nationstech.com/ns-flash/?target=n32h787&firmware=https%3A%2F%2Fraw.githubusercontent.com%2FNsing-Community%2FN32H787-AI-KWS%2Fmain%2Fbin%2Fn32h787_kws_demo.bin)
+### [Open the online flashing page](https://update.nationstech.com/ns-flash/?target=n32h787&firmware=https%3A%2F%2Fraw.githubusercontent.com%2FNsing-Community%2FN32H787-AI-KWS%2Fmain%2Fbin%2Fn32h787_kws_demo.bin&lang=en)
 
-> Connect the NSLink through **DEBUG USB (J9)** before flashing.
+> Connect the NSLink through **DEBUG USB (J9)** before flashing. This project uses only the onboard WM8978 and electret microphone — no camera or other external module is needed.
+
+**Flashing steps**
+
+1. Click **Select ns-link**, pick your device in the dropdown at the top left, then click **Connect** — the chip model (N32H787) and Flash size (2 MB) are detected automatically once connected.
+2. Choose a **firmware source** (one of the two): **Firmware URL** is the prebuilt firmware, with the link already filled in — just use it as is; **Local file** is for flashing your own build — click **Choose file** and load the `.bin`.
+3. Pick a **verification** — the default is fine.
+4. Click **Start flashing** and wait for the progress bar to finish; the log below shows "成功" (success) once the flash is complete.
+5. Once flashing has finished, press reset (or cycle power) to run the new firmware. Click **Serial assistant** (串口助手) in the left sidebar and connect to the NSLink virtual COM port — baud rate **921600** — then speak a keyword into the onboard **MIC**, and the UART prints the recognized **keyword and confidence** in real time.
+
+![ns-flash serial assistant: after flashing, speaking keywords into the onboard MIC prints the keyword and confidence over UART](docs/images/ns_flash_serial_monitor.png)
+
+The output looks like `left 96%`, `up 98%`, `right 98%`. You can also close the page and use the local [tools/kws_monitor.py](tools/kws_monitor.py) instead (see "Using the UART" below).
 
 ## Introduction
 
