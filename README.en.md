@@ -87,7 +87,7 @@ n32h787_kws_demo/
 │   └── tests/                   # host-side unit tests (pytest)
 ├── docs/
 │   └── KWS_DEPLOYMENT.md        # detailed design and deployment notes (memory layout/data path/tuning)
-├── LICENSE                      # Apache License 2.0
+├── LICENSE                      # BSD 3-Clause License
 ├── NOTICE                       # third-party component attribution and licenses
 ├── README.md                    # documentation (Simplified Chinese)
 └── README.en.md                 # documentation (English)
@@ -185,8 +185,10 @@ Some cases (LED polarity/timing, audio DMA interrupts) invoke the local C compil
 
 ## License
 
-This project is released by Nations Technologies Inc. under the **Apache License 2.0**; the full license text is in [LICENSE](LICENSE). All original source files carry an `SPDX-License-Identifier: Apache-2.0` header.
+Code in this project that is wholly owned by Nsing Technologies Inc., or that Nsing Technologies Inc. is otherwise authorised to publish under the BSD 3-Clause License, is released under the **BSD 3-Clause License**; the full license text is in [LICENSE](LICENSE).
+
+**Scope**: that BSD-3-Clause declaration applies only to code for which NSING holds the complete copyright, or has obtained the necessary authorisation and the right to publish under BSD-3-Clause. Where this project contains third-party code, its original copyright notice and license continue to apply — the NSING copyright and the BSD-3-Clause declaration do **not** cover it, and its use, modification and distribution remain governed by its own license.
 
 - Attribution and licenses for third-party components (ARM CMSIS, TensorFlow Lite Micro, the ML-KWS-for-MCU model and MFCC front end, CMSIS-NN, FlatBuffers, gemmlowp, ruy, KissFFT, and the NSLink Flash algorithms) are listed in [NOTICE](NOTICE), with each license text shipped alongside the corresponding source directory (e.g. `firmware/USER/tflm_sdk/LICENSE`, KissFFT's `COPYING`). Please retain them when redistributing.
-- **Important**: [firmware/USER/src/wm8978.c](firmware/USER/src/wm8978.c) and [wm8978.h](firmware/USER/inc/wm8978.h) are ported from the Linux kernel WM8978 driver and retain the **GPL-2.0-only** license declared in their file headers; they are not covered by this project's Apache-2.0 license. If you need to distribute under pure Apache-2.0 terms, replace them with independently written codec configuration code.
-- **Trademarks**: Nations, Nationstech, N32, N32H787, and the Nations Technologies logo are trademarks of Nations Technologies Inc.; the Apache-2.0 license does not grant trademark rights.
+- **Important**: [firmware/USER/src/wm8978.c](firmware/USER/src/wm8978.c) and [wm8978.h](firmware/USER/inc/wm8978.h) are ported from the Linux kernel WM8978 driver and retain the **GPL-2.0-only** license declared in their file headers; they are not covered by this project's BSD-3-Clause license. If you need to distribute under pure BSD-3-Clause terms, replace them with independently written codec configuration code.
+- **Trademarks**: Nations, Nationstech, N32, N32H787, and the Nations Technologies logo are trademarks of Nations Technologies Inc.; the BSD-3-Clause license does not grant trademark rights.

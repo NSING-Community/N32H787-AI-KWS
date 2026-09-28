@@ -87,7 +87,7 @@ n32h787_kws_demo/
 │   └── tests/                   # 主机侧单元测试（pytest）
 ├── docs/
 │   └── KWS_DEPLOYMENT.md        # 详细设计与部署说明（内存布局/数据路径/调参）
-├── LICENSE                      # Apache License 2.0
+├── LICENSE                      # BSD 3-Clause License
 ├── NOTICE                       # 第三方组件归属与许可
 ├── README.md                    # 说明文档（简体中文）
 └── README.en.md                 # 说明文档（English）
@@ -185,8 +185,10 @@ python -m pytest tools\tests -q
 
 ## 开源许可
 
-本工程由国民技术股份有限公司（Nations Technologies Inc.）以 **Apache License 2.0** 发布，完整许可文本见 [LICENSE](LICENSE)。自有源文件头均带有 `SPDX-License-Identifier: Apache-2.0` 声明。
+本工程中由国民技术股份有限公司（Nsing Technologies Inc.）拥有完整版权、或经授权有权按 BSD-3-Clause 发布的代码，以 **BSD 3-Clause License** 发布，完整许可文本见 [LICENSE](LICENSE)。
+
+**适用范围**：上述 BSD-3-Clause 声明仅适用于 NSING 拥有完整版权，或依法取得相应授权且有权按 BSD-3-Clause 发布的代码。工程中包含第三方代码的部分，其原有版权声明与许可证继续适用，**不适用** NSING 的版权与 BSD-3-Clause 声明，其使用、修改和发布均须遵循各自许可证的要求。
 
 - 第三方组件（ARM CMSIS、TensorFlow Lite Micro、ML-KWS-for-MCU 的模型与 MFCC 前端、CMSIS-NN、FlatBuffers、gemmlowp、ruy、KissFFT 及 NSLink Flash 算法）的归属与许可见 [NOTICE](NOTICE)，各自许可文本随附在对应源码目录中（如 `firmware/USER/tflm_sdk/LICENSE`、KissFFT 的 `COPYING`），再分发时请一并保留。
-- **特别注意**：[firmware/USER/src/wm8978.c](firmware/USER/src/wm8978.c) 与 [wm8978.h](firmware/USER/inc/wm8978.h) 移植自 Linux 内核的 WM8978 驱动，保留其文件头声明的 **GPL-2.0-only** 许可，不受本工程 Apache-2.0 许可覆盖；若需以纯 Apache-2.0 形式分发，请自行替换为独立编写的编解码器配置代码。
-- **商标声明**：Nations、Nationstech、N32、N32H787 及国民技术标识为国民技术股份有限公司商标，Apache-2.0 许可不包含商标授权。
+- **特别注意**：[firmware/USER/src/wm8978.c](firmware/USER/src/wm8978.c) 与 [wm8978.h](firmware/USER/inc/wm8978.h) 移植自 Linux 内核的 WM8978 驱动，保留其文件头声明的 **GPL-2.0-only** 许可，不受本工程 BSD-3-Clause 许可覆盖；若需以纯 BSD-3-Clause 形式分发，请自行替换为独立编写的编解码器配置代码。
+- **商标声明**：Nations、Nationstech、N32、N32H787 及国民技术标识为国民技术股份有限公司商标，BSD-3-Clause 许可不包含商标授权。
