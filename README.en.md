@@ -8,7 +8,7 @@ A template project that runs the TensorFlow Lite Micro DS-CNN_S keyword spotting
 
 No toolchain installation required. Open the link below in Chrome/Edge and flash the firmware straight to the N32H787 through an NSLink debugger:
 
-### [Open the online flashing page](https://update.nationstech.com/ns-flash/?target=n32h787&firmware=https%3A%2F%2Fraw.githubusercontent.com%2FNsing-Community%2FN32H787-AI-KWS%2Fmain%2Fbin%2Fn32h787_kws_demo.bin&lang=en)
+### [Open the online flashing page](https://update.nationstech.com/ns-flash/?target=n32h787&firmware=https%3A%2F%2Fraw.githubusercontent.com%2FNSING-Community%2FN32H787-AI-KWS%2Fmain%2Fbin%2Fn32h787_kws_demo.bin&lang=en)
 
 > Connect the NSLink through **DEBUG USB (J9)** before flashing. This project uses only the onboard WM8978 and electret microphone — no camera or other external module is needed.
 
